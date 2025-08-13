@@ -210,7 +210,7 @@ const AppDevelopment = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Basic App</h3>
-                <div className="text-3xl font-bold text-purple-600 mb-6">$5,999</div>
+                <div className="text-3xl font-bold text-purple-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />
@@ -239,7 +239,7 @@ const AppDevelopment = () => {
                   Most Popular
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Professional App</h3>
-                <div className="text-3xl font-bold text-purple-600 mb-6">$12,999</div>
+                <div className="text-3xl font-bold text-purple-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />
@@ -265,7 +265,7 @@ const AppDevelopment = () => {
 
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise App</h3>
-                <div className="text-3xl font-bold text-purple-600 mb-6">$25,999</div>
+                <div className="text-3xl font-bold text-purple-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />

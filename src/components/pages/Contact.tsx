@@ -77,7 +77,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Office',
-      details: '123 Business Ave, Suite 100',
+      details: 'Evelin Street, Windhoek',
       description: 'Windhoek, Namibia',
     },
     {

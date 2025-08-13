@@ -192,7 +192,7 @@ const DataAnalytics = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Basic Analytics</h3>
-                <div className="text-3xl font-bold text-green-600 mb-6">$2,999</div>
+                <div className="text-3xl font-bold text-green-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />
@@ -221,7 +221,7 @@ const DataAnalytics = () => {
                   Most Popular
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Analytics</h3>
-                <div className="text-3xl font-bold text-green-600 mb-6">$7,999</div>
+                <div className="text-3xl font-bold text-green-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />
@@ -247,7 +247,7 @@ const DataAnalytics = () => {
 
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Analytics</h3>
-                <div className="text-3xl font-bold text-green-600 mb-6">$19,999</div>
+                <div className="text-3xl font-bold text-green-600 mb-6">N$...</div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
                     <CheckCircle size={16} className="text-green-500 mr-2" />

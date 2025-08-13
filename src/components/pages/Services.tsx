@@ -7,14 +7,14 @@ const Services = () => {
       title: 'Web Development',
       description: 'Custom web applications built with modern technologies and best practices.',
       features: ['SME Businesses Website', 'Businesses Website', 'Corperate Websites', 'E-Comerce/ OlineShop'],
-      price: 'Starting at N$5,000',
+      price: 'Starting at N$...',
     },
     {
       icon: Smartphone,
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile apps for iOS and Android.',
       features: ['React Native', 'Flutter', 'iOS Native', 'Android Native'],
-      price: 'Starting at $8,000',
+      price: 'Starting at N$...',
     },
     {
       icon: Brain,
@@ -28,21 +28,21 @@ const Services = () => {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights for better decision making.',
       features: ['Data Visualization', 'Business Intelligence', 'Predictive Analytics', 'Reporting'],
-      price: 'Starting at $3,000',
+      price: 'Starting at N$...',
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions.',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Training'],
-      price: 'Starting at $4,000',
+      price: 'Starting at N$...',
     },
     {
       icon: Zap,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services.',
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Monitoring'],
-      price: 'Starting at $3,500',
+      price: 'Starting at N$...',
     },
   ];
 
