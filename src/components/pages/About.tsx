@@ -98,9 +98,7 @@ const About = () => {
   ];
 
   const scrollToBottom = () => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -231,7 +229,6 @@ const About = () => {
     setCurrentImageSlide((prev) => (prev - 1 + techImages.length) % techImages.length);
   };
 
-
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
@@ -286,13 +283,17 @@ const About = () => {
               
               {/* Image Navigation Buttons */}
               <button
+                type="button"
                 onClick={prevImageSlide}
+                aria-label="Previous image"
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
+                type="button"
                 onClick={nextImageSlide}
+                aria-label="Next image"
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
               >
                 <ChevronRight size={20} />
@@ -303,7 +304,9 @@ const About = () => {
                 {techImages.map((_, index) => (
                   <button
                     key={index}
+                    type="button"
                     onClick={() => setCurrentImageSlide(index)}
+                    aria-label={`Go to image ${index + 1}`}
                     className={`w-3 h-3 rounded-full transition-all ${
                       currentImageSlide === index ? 'bg-white' : 'bg-white bg-opacity-50'
                     }`}
@@ -385,13 +388,17 @@ const About = () => {
             
             {/* Navigation Buttons */}
             <button
+              type="button"
               onClick={prevSlide}
+              aria-label="Previous team members"
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition-colors shadow-lg"
             >
               <ChevronLeft size={24} />
             </button>
             <button
+              type="button"
               onClick={nextSlide}
+              aria-label="Next team members"
               className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition-colors shadow-lg"
             >
               <ChevronRight size={24} />
@@ -402,7 +409,9 @@ const About = () => {
               {Array.from({ length: Math.ceil(team.length / 2) }).map((_, index) => (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to team slide ${index + 1}`}
                   className={`w-3 h-3 rounded-full transition-all ${
                     currentSlide === index ? 'bg-green-600' : 'bg-gray-300'
                   }`}
@@ -416,8 +425,10 @@ const About = () => {
       {/* Floating Chat Button */}
       {!isChatOpen && (
         <button
+          type="button"
           onClick={() => setIsChatOpen(true)}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
+          aria-label="Open chat assistant"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
         >
           <MessageCircle size={24} />
         </button>
@@ -427,14 +438,16 @@ const About = () => {
       {isChatOpen && (
         <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-2xl flex flex-col z-50 border border-gray-200">
           {/* Chat Header */}
-          <div className="bg-red-600 text-white p-4 rounded-t-lg flex items-center justify-between">
+          <div className="bg-green-600 text-white p-4 rounded-t-lg flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Bot size={20} />
               <span className="font-semibold">TpolyMath Assistant</span>
             </div>
             <button
+              type="button"
               onClick={() => setIsChatOpen(false)}
-              className="hover:bg-red-700 p-1 rounded"
+              aria-label="Close chat"
+              className="hover:bg-green-700 p-1 rounded"
             >
               <X size={20} />
             </button>
@@ -449,7 +462,7 @@ const About = () => {
               >
                 <div className={`max-w-xs px-3 py-2 rounded-lg ${
                   message.sender === 'user' 
-                    ? 'bg-red-600 text-white' 
+                    ? 'bg-green-600 text-white' 
                     : 'bg-gray-200 text-gray-800'
                 }`}>
                   <div className="flex items-center space-x-1 mb-1">
@@ -489,12 +502,14 @@ const About = () => {
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Ask me about TpolyMath..."
-                className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-red-600"
+                className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-green-600"
               />
               <button
+                type="button"
                 onClick={handleSendMessage}
                 disabled={!inputMessage.trim()}
-                className="bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
+                aria-label="Send message"
+                className="bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 <Send size={16} />
               </button>
